@@ -1,4 +1,4 @@
-# Git Course
+#bla blabla blabla Git Course
 
 Arquivo da aula de Git e Github para iniciantes.
 Este é um repositório teste para ver como o Git funciona.
