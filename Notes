@@ -1,0 +1,16 @@
+GIT -> sistema de controle de versão
+GITHUB -> local da web para colocar projetos versionados em GIT. Só um repositório remoto.
+
+O Git guarda suas informaçõesem 3 lugares:
+	1. git config do sistema
+	2. git config do usuário
+	3. git do projeto específico
+
+Configuração do Git: 
+$ git config --global user.nome "Leticia Garanhani"
+
+$ git config --global user.email "leticia.garanhani@gmail.com"
+
+$ git config --list  //  lista com todas as propriedade
+
+
