@@ -13,4 +13,21 @@ $ git config --global user.email "leticia.garanhani@gmail.com"
 
 $ git config --list  //  lista com todas as propriedade
 
+Para inicializar um repositório e ele ser considerado parte do ecossistema do git, utilizar o comando <git init>. Ele será responsável pelo repositório e ficar enxergando de todas as mudanças deste projeto. E será criado um diretório ".git"(oculto).
+
+Dentro do diretório ".git" estão algumas pastas:
+	HEAD 
+	branches -> quais os branches existente e o branch padrão
+	config	-> configuração do repositório
+	description
+	hooks	-> gatilhos paara determinadas ações
+	info
+	objects
+	refs
+
+Ciclo de Vida dos Status dos Arquivos:
+1. Untracked - Não Marcado: momento em que o arquivo acabou de ser adicionado. O Git não reconhece nenhuma vesão da existência deste arquivo.
+2. Unmodified - Não modificado: o arquivo passa a existir no git após ser adicionado <git add file>, mas não apresenta nenhuma modificação em cima dele.
+3. Modified: quando arquivo foi editado.
+$. Staged: momento que o arquivo é colocado na área que vai ser criada a versão, a área "Staged". Assim, que é gerado o commit, o arquivo staged volta a ser unmodified. 
 
