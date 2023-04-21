@@ -31,3 +31,4 @@ Ciclo de Vida dos Status dos Arquivos:
 3. Modified: quando arquivo foi editado.
 $. Staged: momento que o arquivo é colocado na área que vai ser criada a versão, a área "Staged". Assim, que é gerado o commit, o arquivo staged volta a ser unmodified. 
 
+TESTE: criei uma branch test1 e vou dar commit.
