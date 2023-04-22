@@ -32,3 +32,17 @@ Ciclo de Vida dos Status dos Arquivos:
 $. Staged: momento que o arquivo é colocado na área que vai ser criada a versão, a área "Staged". Assim, que é gerado o commit, o arquivo staged volta a ser unmodified. 
 
 TESTE: criei uma branch test1 e vou dar commit.
+
+
+
+
+.gitignore: 
+arquivo criado para passar alguns padrões de arquivos, ou os nomes dos próprios arquivos que não queremos versionar/migrar para o repositório. Pode ser criado no próprio Vim. No diretório GitHub/gitignore do GitHub, é possível encontrar vários padrões de arquivos .gitignore para projetos de diferentes linguagens.
+
+Criando Alias, para o Git, no terminal
+Para não nos cansarmos de tanto digitar "git status", podemos criar um alias "git s" da seguinte forma: 
+	$ git config --global alias.s status
+	$ git s
+
+
+
