@@ -29,11 +29,40 @@ Ciclo de Vida dos Status dos Arquivos:
 1. Untracked - Não Marcado: momento em que o arquivo acabou de ser adicionado. O Git não reconhece nenhuma vesão da existência deste arquivo.
 2. Unmodified - Não modificado: o arquivo passa a existir no git após ser adicionado <git add file>, mas não apresenta nenhuma modificação em cima dele.
 3. Modified: quando arquivo foi editado.
-$. Staged: momento que o arquivo é colocado na área que vai ser criada a versão, a área "Staged". Assim, que é gerado o commit, o arquivo staged volta a ser unmodified. 
-
-TESTE: criei uma branch test1 e vou dar commit.
+4. Staged: momento que o arquivo é colocado na área que vai ser criada a versão, a área "Staged". Assim, que é gerado o commit, o arquivo staged volta a ser unmodified. 
 
 
+COMANDOS
+
+	git init: no diretório escolhido, é responsávil por inicializar o repositório e ficar enxergando todas as mudanças ocorridas. Este comando cria o diretório .git.
+
+	git status: reporta a situação do repositório.
+
+	git add: adiciona arquivos ao rastreamento para versionamento. Ao pesquisar com git status, mostra o arquivo adicionado como "New file". Após comando git add, arquivo fica na situação de staged (até ser commitado ou modificado).
+
+	git commit -m "<mensagem>": é o momento que você avisa o git para pegar todos os arquivos do repositório que foram adicionados e criar uma imagem deles, uma versão.
+
+	git log: para ver histórico de commits. Mostra o hash, autor, data e comentário utilizado.
+		$ git log --author="<nome ou parte dele>", este comando lista logs por autor do commit
+		$ git shortlog, este comando lista quantidade de por autor e apenas comentários/mensagens
+		$ git shortlog -sn, este comando lista quantidade de commits por autor, e só.
+		$ git log --graph, este comando mostra de forma gráfica o que está acontecendo com os branches e versões.
+
+	git show <hash>: este comando identifica qual foi a alteração do commit, autor, data e comentário.
+	
+	git diff: este comando mostra as modificações do arquivo que já foi versionado antes, após uma modificação, antes de aplicar "git add", ou antes de ""git commit".
+		$ git diff --name-only, no caso de uma lista imensa de arquivos modificados, é listado apenas os nomes dos arquivos, e não suas alterações.
+	
+	git checkout: retorna a versão do arquivo com status modificado para antes da alteração. Ao abrir o arquivo, vê-se que a alteração foi desfeita.
+		$ git checkout <nome do arquivo>
+
+	git reset --soft <penúltimo hash>: retira a alteração do último hash do log, deixando a alteração no arquivo staged, preparado para commitar novamente.
+
+	git reset --mixed <penúntimo hash>: retira o último hash da lista de logs, mas deixa o arquivo com a alteração commitadano último hash, com o arquivo na situação de modified (antes do staged, tendo que dar git add novamente).
+
+	git reset --hard <penúltimo hash>: mata a alteração do último commit, do último hash. Não há mais nada a fazer. Ele altera o histórico do último commit. Usar com muito cuidado. 
+
+	git push origin <branch que está>: efetiva as alterações no repositório remoto.
 
 
 .gitignore: 
