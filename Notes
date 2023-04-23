@@ -1,3 +1,4 @@
+
 GIT -> sistema de controle de versão
 GITHUB -> local da web para colocar projetos versionados em GIT. Só um repositório remoto.
 
@@ -72,6 +73,8 @@ COMANDOS
 
 	git branch -D <nome da branch>: comando que deleta a branch escolhida.
 
+	git revert <último hash>: comando que revert o que foi feito no último commit, voltando o repositório para a situação do penúltimo commit. No git log, ele não deleta o commit do último hash, apenas deleta a modificação do último commit. Assim, não se perde do histórico de todos os commits realizados como no reset. 
+
 
 O que é um branch?
 Branch é um ponteiro móvel que leva a um commit. A partir de uma hash, podemos criar um novo branch, apontando para um mesmo ou outro hash. As vantagens são:
@@ -93,6 +96,16 @@ Criando Alias, para o Git, no terminal
 Para não nos cansarmos de tanto digitar "git status", podemos criar um alias "git s" da seguinte forma: 
 	$ git config --global alias.s status
 	$ git s
+
+
+Tags
+Serve para quando queremos definir versões para projetos muitograndes ou bibliotecas. Para quando queremos fazer um delimitador maior, além de uma certa quantidade de commits. Elas serão exibidas no Github na aba de "Releases".
+	$ git tag -a 1.0.0 -m "Readme finalizado", comando para criar a tag, com uma notação e mensagem
+	$ git push origin <branch> --tags, comando para dar push das tags no repositório 
+Para deletar há duas situações. Umas que só se deleta localmente, e outra que consegue deletar no repositório remoto:
+	$ g tag -d 1.0.1, comando deleta a tag localmente...
+	$ git push origin master --tags, mas não adianta executar este comando na sequência, que nada acontecerá no repositório remoto.
+	$ git push origin :1.0.0, agora com este comando de push que será efetivada a exclusão no repositório remoto. 
 
 
 Comando que clona repositório atualmente funcionando no meu Mac:
