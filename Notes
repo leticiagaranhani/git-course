@@ -73,16 +73,26 @@ COMANDOS
 	git branch -D <nome da branch>: comando que deleta a branch escolhida.
 
 
+O que é um branch?
+Branch é um ponteiro móvel que leva a um commit. A partir de uma hash, podemos criar um novo branch, apontando para um mesmo ou outro hash. As vantagens são:
+	- poder modificar arquivos, sem alterar o local principal;
+	- são facilmente "desligáveis", podemos apagar instantaneamente;
+	- possibilita várias pessoas estarem trabalhando ao mesmo tempo;
+	- evita conflitos de código.
+
+
+Fork 
+O fork é uma outra funcionalidade, onde você baixa um projeto que não é seu, e faz uma cópia para você, no caso de você querer contribuir para o projeto de outra pessoa. Depois envia um pull request para o proprietário daquele projeto, informando a sugestão de ajuste, por exemplo. Fork é para conseguir enviar a modificação para outro dono de projeto. Se você apenas clonar o projeto de alguém, modificará sem conseguir enviar de volta para aquele autor.
 
 
 .gitignore: 
 arquivo criado para passar alguns padrões de arquivos, ou os nomes dos próprios arquivos que não queremos versionar/migrar para o repositório. Pode ser criado no próprio Vim. No diretório GitHub/gitignore do GitHub, é possível encontrar vários padrões de arquivos .gitignore para projetos de diferentes linguagens.
 
+
 Criando Alias, para o Git, no terminal
 Para não nos cansarmos de tanto digitar "git status", podemos criar um alias "git s" da seguinte forma: 
 	$ git config --global alias.s status
 	$ git s
-
 
 
 Comando que clona repositório atualmente funcionando no meu Mac:
