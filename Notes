@@ -64,6 +64,16 @@ COMANDOS
 
 	git push origin <branch que está>: efetiva as alterações no repositório remoto.
 
+	git checkout -b <nome da nova branch>: comando para criar nova branch
+
+	git branch: mostra as branches existentes, e o "*" indica em qual branch você está.
+
+	git checkout <nome da branch>: comando para navegar para a branch citada.
+
+	git branch -D <nome da branch>: comando que deleta a branch escolhida.
+
+
+
 
 .gitignore: 
 arquivo criado para passar alguns padrões de arquivos, ou os nomes dos próprios arquivos que não queremos versionar/migrar para o repositório. Pode ser criado no próprio Vim. No diretório GitHub/gitignore do GitHub, é possível encontrar vários padrões de arquivos .gitignore para projetos de diferentes linguagens.
@@ -74,4 +84,10 @@ Para não nos cansarmos de tanto digitar "git status", podemos criar um alias "g
 	$ git s
 
 
+
+Comando que clona repositório atualmente funcionando no meu Mac:
+$ git clone ssh://git@ssh.github.com:443/<userGitHub>/<repo name>.git
+
+Comando que adicionou/atualizou nova branch do meu Mac no meu GitHub:
+$ git push --set --upstream origin <nome da nova branch>
 
